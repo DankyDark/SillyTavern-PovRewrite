@@ -1,0 +1,55 @@
+<div id="pov-rewrite-settings" class="extension_settings">
+  <div class="inline-drawer">
+    <div class="inline-drawer-toggle inline-drawer-header">
+      <b>POV Rewrite</b>
+      <div class="inline-drawer-icon fa-solid fa-circle-chevron-down"></div>
+    </div>
+    <div class="inline-drawer-content">
+      <!-- Enable Toggle -->
+      <hr class="pov-rewrite-enabled">
+      <div class="flex-container">
+        <label class="checkbox_label" for="pov-rewrite-enabled">
+          <input type="checkbox" id="pov-rewrite-enabled" />
+          <span>Enable Extension</span>
+        </label>
+      </div>
+
+      <!-- Profile Selector -->
+      <hr class="sysHR" style="margin: 10px 0;" />
+      <fieldset id="pov-rewrite-config" class="pov-rewrite-config">
+        <div class="marginBot5">
+          <label for="pov-rewrite-profile">
+            <small><b>Connection Profile:</b></small>
+          </label>
+          <select id="pov-rewrite-profile" class="text_pole"></select>
+        </div>
+
+        <!-- Prompt Template Editor -->
+        <hr class="sysHR" style="margin: 10px 0;" />
+        <div class="marginBot5">
+          <label for="pov-rewrite-prompt">
+            <small><b>Prompt Template:</b></small>
+          </label>
+          <textarea id="pov-rewrite-prompt" class="text_pole textarea_compact" rows="8"></textarea>
+          <div class="extensions_warning">
+            <small><strong>REQUIRED:</strong> Use {{FIELD_TEXT}} placeholder for the source text</small>
+            <br />
+          </div>
+          <div class="pov-rewrite-reset-row">
+            <button id="pov-rewrite-reset-defaults" class="menu_button pov-rewrite-reset-btn" type="button">
+              <i class="fa-solid fa-rotate-left"></i>
+              <span>Reset to Defaults</span>
+            </button>
+          </div>
+        </div>
+      </fieldset>
+
+      <hr class="sysHR" style="margin: 5px 0;" />
+      <p class="extensions_warning">
+        <small>
+          <strong>Tip:</strong> The rewrite button appears next to the delete button in the character edit panel.
+        </small>
+      </p>
+    </div>
+  </div>
+</div>

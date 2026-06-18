@@ -1,0 +1,104 @@
+/* POV Rewrite Extension Styles - Using SillyTavern CSS Variables and Classes
+   Popup + preview dialog styles live in modules/ui/ui.css (loaded at runtime). */
+
+/* Field Toggles Section - Use SillyTavern checkbox styling */
+.pov-rewrite-field-toggles {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: var(--black30a);
+    border-radius: 5px;
+    border: 1px solid var(--SmartThemeBorderColor);
+}
+
+.pov-rewrite-field-toggles .checkbox_label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 4px 0;
+    cursor: pointer;
+    color: var(--SmartThemeBodyColor);
+}
+
+.pov-rewrite-field-toggles .checkbox_label:hover {
+    background-color: var(--white30a);
+    border-radius: 3px;
+}
+
+.pov-rewrite-field-toggles input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.pov-rewrite-field-toggles span {
+    font-size: var(--mainFontSize);
+    color: var(--SmartThemeBodyColor);
+}
+
+/* Field Action Buttons - Use SillyTavern menu_button styling */
+.pov-rewrite-field-actions {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.pov-rewrite-field-actions .menu_button {
+    flex: 1;
+    font-size: var(--mainFontSize);
+    color: var(--SmartThemeBodyColor);
+    background-color: var(--SmartThemeBlurTintColor);
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 5px;
+    padding: 3px 5px;
+    cursor: pointer;
+    transition: var(--animation-duration-2x);
+    filter: grayscale(0.5);
+}
+
+.pov-rewrite-field-actions .menu_button:hover {
+    background-color: var(--white30a);
+    filter: brightness(1.25);
+}
+
+.pov-rewrite-field-actions .menu_button:active {
+    transform: translateY(1px);
+}
+
+/* Fix top hr jumping issue */
+.pov-rewrite-enabled-hr {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+/* Config fieldset: disabled visual state when extension is off */
+.pov-rewrite-config {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    transition: opacity 0.2s ease;
+}
+
+.pov-rewrite-config.pov-rewrite-config-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    filter: grayscale(0.6);
+}
+
+/* Reset button: full width, not squished */
+.pov-rewrite-reset-row {
+    margin-top: 8px;
+}
+
+.pov-rewrite-reset-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: auto;
+    min-height: 36px;
+    padding: 6px 14px;
+    font-size: var(--mainFontSize);
+}
