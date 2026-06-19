@@ -1,7 +1,4 @@
-# NOTE
-While you are free to use this extension however you see fit, I made this for personal use so it may be buggy or not work for you. At the moment it's not something I plan to release officially, but if you do use it and find issues you can reach out to me. Otherwise, feel free to fork and modify it as needed.
-
-> This extension is a little buggy and experimental, use at your own risk. I'm still working out some kinks.
+> This extension is a WIP and you might find some bugs, use at your own risk. I'm still working out some kinks.
 
 ## POV Rewrite Extension for SillyTavern
 
@@ -10,7 +7,7 @@ Convert character cards to first-person perspective using AI.
 ## Installation
 
 1. Install: Extensions → Install extension → `https://github.com/DankyDark/SillyTavern-PovRewrite`
-2. Open any character and find the "💬" button
+2. Open any character and find the "💬" button in the character panel next to the favorites button
 
 ## Usage
 
@@ -32,7 +29,7 @@ Each rewrite targets exactly one field (or a single greeting) for a clean, unamb
 - **Prompt Template**: Customize the conversion prompt. Placeholder:
   - `{{FIELD_TEXT}}` - the source text to rewrite (required)
 
-The output format (JSON, array vs single string) is handled automatically based on the selected field. You don't need to include any return-format instructions in your template.
+> The output format (JSON, array vs single string) is handled automatically based on the selected field. You DO NOT need to include any return format instructions in your template.
 
 ## How It Works
 
@@ -44,8 +41,7 @@ The output format (JSON, array vs single string) is handled automatically based 
 
 ## Requirements
 
-- SillyTavern with AI backend configured
-- AI model that supports JSON output (OpenAI, Claude, etc.)
+- SillyTavern Latest release version (for the Experimental Macro Engine) or staging
 - **Experimental Macro Engine enabled** (User Settings → it's on by default). Required so `{{char}}`/`{{user}}` macros in card text survive the rewrite intact. If disabled, the macros may be mangled during rewrite.
 
 ## Troubleshooting
