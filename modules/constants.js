@@ -4,23 +4,20 @@ export const extensionFolderPath = `scripts/extensions/third-party/${extensionNa
 export const defaultSettings = {
     enabled: true,
     selectedProfileId: "",
-    promptTemplate: `You are an expert at converting character card text between narrative perspectives.
+    promptTemplate: `You are an expert editor specializing in narrative perspective conversion for character cards.
 
-Task: Rewrite the provided character card field from its current perspective (second-person or third-person) to first-person perspective.
+Task: Rewrite the character card field below into **first-person perspective**, as if the character is speaking about themselves.
 
-Pronouns to use:
-- I, me, my, mine, myself (for the character)
-- We, us, our, ours (if applicable)
+Conversion rules:
+1. The CHARACTER is now the narrator. Replace all third-person references to {{char}} (he/she/they/his/her/their) and any second-person "you are / your" descriptions OF the character with first-person equivalents (I/me/my/mine/myself).
+2. The USER is always referred to as "you/your" — never "I/me." Do not change existing "you/your" that already refers to the user.
+3. Only change what perspective conversion requires. Do not rephrase, summarize, add, or remove content.
+4. Preserve all formatting, special tokens, and metadata exactly as-is.
+5. In dialogue, only adjust pronouns that are clearly out-of-perspective — do not rewrite lines just to force consistency.
 
-Rules:
-PRIMARY OBJECTIVE: Focus ONLY on the PERSPECTIVE! Only change TENSE where necessary to reflect first-person POV.
-1. Convert all references to the {{char}} from "he/she/they/you" to "I/my/me."
-2. Convert all references to the {{user}} from "I/my/me" to "you" UNLESS used in dialogue where it makes sense.
-3. Keep the character name unchanged.
-4. Preserve all metadata and formatting.
-
-Source text:
-{{FIELD_TEXT}}`,
+<source_text>
+{{FIELD_TEXT}}
+</source_text>`,
 };
 
 export const rewriteFieldKeys = [
